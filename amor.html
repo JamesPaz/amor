@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para Mi Reina</title>
+  <link href="corazon.png" rel='shortcut icon' type='image/png'/>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('fondo2.webp'); /* Cambia 'fondo_amor.jpg' por tu imagen de fondo */
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 90%; /* Ancho de la tarjeta */
+      max-width: 400px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card-header {
+      background-color: #f44336;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .card-body {
+      padding: 20px;
+    }
+
+    .gallery-container {
+      position: relative;
+      overflow: hidden; /* Oculta las imágenes que estén fuera de la vista */
+      margin-top: 20px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: nowrap; /* Asegura que las imágenes se desplacen horizontalmente */
+      animation: gallery-slide 10s linear infinite; /* Define la animación de desplazamiento de la galería */
+    }
+
+    .gallery img {
+      width: 30%; /* Ajustar el tamaño de las imágenes */
+      height: auto; /* Altura automática para mantener la proporción */
+      margin: 5px;
+      object-fit: cover;
+      border-radius: 5px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1);
+    }
+
+    @keyframes gallery-slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    @keyframes heartbeat {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .heart {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background-image: url('heart.png'); /* Cambia 'heart.png' por tu imagen */
+      background-size: cover;
+      animation: heartbeat 1s infinite;
+    }
+
+    /* Estilos para el botón */
+    .gift-btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      position: relative;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      margin-top: 20px;
+    }
+
+    .gift-icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Estilos para el modal */
+    .modal {
+      display: none; /* Ocultar el modal por defecto */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+      z-index: 9999;
+    }
+
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .modal-image {
+      max-width: 100%;
+      max-height: 60vh; /* Ajusta la altura máxima según sea necesario */
+      margin-bottom: 10px; /* Espacio entre la imagen y el pie de imagen */
+    }
+
+    .image-caption {
+      font-style: italic;
+      color: #666;
+    }
+
+    /* Estilos para el contenido desplazable */
+    .scrollable-content {
+      overflow-y: auto;
+      max-height: 300px; /* Altura máxima del contenido desplazable */
+    }
+
+    /* Media queries para pantallas más pequeñas */
+    @media screen and (max-width: 600px) {
+      .card {
+        width: 90%; /* Ajustar el tamaño de la tarjeta para pantallas pequeñas */
+      }
+
+      .gallery img {
+        width: 45%; /* Ajustar el tamaño de las imágenes para pantallas pequeñas */
+      }
+    }
+  </style>
+</head>
+<body>
+    <audio id="audio" loop autoplay style="display: block;">
+        <source src="cancion.mp3" type="audio/mpeg">
+      </audio>
+  <div class="card">
+    <div class="card-header">
+      <h2>❤️¡Feliz San Valentín!❤️</h2>
+    </div>
+    <div class="card-body">
+        <div class="scrollable-content"> 
+            <p>Mi Reina Preciosa ❤️</p>
+            <p>Es nuestro primer San Valentín juntos y pues nos toca de lejitos amor, pero no voy a dejar pasar la fecha, así sea a la distancia me gusta hacerte sentir especial y que sientas que tienes a alguien a tu lado. Esto no es una gran cosa amor, pero con mucho amor, con lo que se trató de hacer algo para ti, porque eres y siempre serás lo más importante y bonito que me ha pasado reina. Te amo con todo mi corazón, creeme que quiero todo contigo, no hay un día que no me imagine un futuro a tu lado, me tienes así de enamorado y no es pasajero esto que siento por ti, porque ya llevamos meses, nos alejamos, pero lo que siento por ti no se va amor, esta y siempre está muy presente, estás bien metida en mi corazón y de ahí nada ni nadie te va a sacar. Discúlpame porque no siempre soy el mejor hombre y he tenido actitudes feas, pero por ti he mejorado y voy a seguir mejorando, porque quiero que contigo funcione, porque quiero que sea contigo, no quiero ninguna otra persona en mi vida que no seas tú. TE AMOOOO, TE AMOOOOO</p>
+            <div class="gallery-container">
+              <div class="gallery">
+                <img src="imagen1.jpeg" alt="Imagen 1">
+                <img src="imagen2.jpeg" alt="Imagen 2">
+                <img src="imagen3.jpeg" alt="Imagen 3">
+                <!-- Agrega más imágenes según sea necesario -->
+              </div>
+            </div>
+            <p>TE AMOOOOO❤️</p>
+            <p>Con amor,</p>
+            <p>Arley</p>
+            <!-- Botón en forma de regalo -->
+            Presiona aqui
+            <button class="gift-btn" onclick="openModal()">
+              <img src="regalo.webp" alt="Regalo" class="gift-icon">
+            </button></div>
+      
+      <!-- Modal -->
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <!-- Botón para cerrar el modal -->
+          <span class="close-btn" onclick="closeModal()">&times;</span>
+          <!-- Imagen grande en el modal -->
+          <img src="girasol.webp" alt="Imagen Grande" class="modal-image">
+          <!-- Pie de imagen -->
+          <p class="image-caption">Por ahora no te puedo dar un ramo de girasoles presencial, que sé que te gustan mucho, te lo envió virtual y cuando estemos juntos te los daré. TE AMO</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Obtener la galería
+    const gallery = document.querySelector('.gallery');
+
+    // Duplicar las imágenes para crear el efecto de bucle
+    const images = gallery.querySelectorAll('img');
+    images.forEach(img => {
+      const clone = img.cloneNode(true);
+      gallery.appendChild(clone);
+    });
+
+    function openModal() {
+      document.getElementById('myModal').style.display = 'block';
+    }
+
+    function closeModal() {
+      document.getElementById('myModal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
